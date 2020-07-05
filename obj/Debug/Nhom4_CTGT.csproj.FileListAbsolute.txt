@@ -1,0 +1,7 @@
+D:\Nhom4_CTGT\Nhom4_CTGT\bin\Debug\Nhom4_CTGT.exe.config
+D:\Nhom4_CTGT\Nhom4_CTGT\bin\Debug\Nhom4_CTGT.exe
+D:\Nhom4_CTGT\Nhom4_CTGT\bin\Debug\Nhom4_CTGT.pdb
+D:\Nhom4_CTGT\Nhom4_CTGT\obj\Debug\Nhom4_CTGT.csprojAssemblyReference.cache
+D:\Nhom4_CTGT\Nhom4_CTGT\obj\Debug\Nhom4_CTGT.csproj.CoreCompileInputs.cache
+D:\Nhom4_CTGT\Nhom4_CTGT\obj\Debug\Nhom4_CTGT.exe
+D:\Nhom4_CTGT\Nhom4_CTGT\obj\Debug\Nhom4_CTGT.pdb
