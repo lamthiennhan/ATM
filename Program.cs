@@ -182,7 +182,7 @@ namespace Do_An2
                         Console.ResetColor();
 
                         //Sửa trong file
-                        using (StreamWriter sw = new StreamWriter(@"D:\Nhom4_CTGT\Nhom4_CTGT\TheTu.txt"))
+                        using (StreamWriter sw = new StreamWriter("TheTu.txt"))
                         {
                             sw.WriteLine(b.Count);
                             for (int i = 0; i < b.Count; i++)
@@ -413,10 +413,10 @@ namespace Do_An2
                             if (string.Compare(ID, b[i].id) == 0)
                             {
                                 //Xóa file
-                                File.Delete(@"D:\Nhom4_CTGT\Nhom4_CTGT\ID\" + ID + ".txt");
-                                File.Delete(@"D:\Nhom4_CTGT\Nhom4_CTGT\LSID\" + ID + ".txt");
+                                File.Delete(@"ID\" + ID + ".txt");
+                                File.Delete(@"LSID\" + ID + ".txt");
  
-                                using (StreamWriter sw = new StreamWriter(@"D:\Nhom4_CTGT\Nhom4_CTGT\TheTu.txt"))
+                                using (StreamWriter sw = new StreamWriter("TheTu.txt"))
                                 {
                                     sw.WriteLine(b.Count - 1);
                                     for (int j = 0; j < b.Count; j++)
@@ -559,7 +559,7 @@ namespace Do_An2
                                     }
                                 }
                                 //Sửa trong file
-                                using (StreamWriter sw = new StreamWriter(@"D:\Nhom4_CTGT\Nhom4_CTGT\TheTu.txt"))
+                                using (StreamWriter sw = new StreamWriter("TheTu.txt"))
                                 {
                                     sw.WriteLine(b.Count);
                                     for (int j = 0; j < b.Count; j++)
@@ -895,7 +895,7 @@ namespace Do_An2
             //Đọc file Admin
             try
             {
-                StreamReader sr = new StreamReader(@"D:\Nhom4_CTGT\Nhom4_CTGT\" + file1 + ".txt");
+                StreamReader sr = new StreamReader(file1 + ".txt");
                 int soLuong;
 
                 string[] a1 = new string[] { dauCach };
@@ -927,7 +927,7 @@ namespace Do_An2
             try
             {
                 //File TheTu
-                StreamReader srTheTu = new StreamReader(@"D:\Nhom4_CTGT\Nhom4_CTGT\" + file2 + ".txt");
+                StreamReader srTheTu = new StreamReader(file2 + ".txt");
                 int soLuong;
 
                 string[] a1 = new string[] { dauCach };
@@ -954,7 +954,7 @@ namespace Do_An2
                     //File ID
                     file3 = b[i].id;
 
-                    StreamReader srID = new StreamReader(@"D:\Nhom4_CTGT\Nhom4_CTGT\ID\" + file3 + ".txt");
+                    StreamReader srID = new StreamReader(@"ID\" + file3 + ".txt");
 
                     ID id = new ID();
                     line = srID.ReadLine();
@@ -969,7 +969,7 @@ namespace Do_An2
                     srID.Close();
 
                     //File LSID
-                    StreamReader srLSID = new StreamReader(@"D:\Nhom4_CTGT\Nhom4_CTGT\LSID\" + file3 + ".txt");
+                    StreamReader srLSID = new StreamReader(@"LSID\" + file3 + ".txt");
 
                     LSID lsid = new LSID();
                     line = srLSID.ReadLine();
