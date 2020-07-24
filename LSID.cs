@@ -16,7 +16,7 @@ namespace Do_An2
             tG = null;
             soTien = 0;
         }
-        public LSID(string loaiGD, string id, int soTien)
+        public LSID(string loaiGD, string id, int soTien, string tG)
         {
             this.loaiGD = loaiGD;
             this.id = id;

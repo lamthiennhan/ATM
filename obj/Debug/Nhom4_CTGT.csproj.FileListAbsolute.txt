@@ -5,3 +5,9 @@ D:\Nhom4_CTGT\Nhom4_CTGT\obj\Debug\Nhom4_CTGT.csprojAssemblyReference.cache
 D:\Nhom4_CTGT\Nhom4_CTGT\obj\Debug\Nhom4_CTGT.csproj.CoreCompileInputs.cache
 D:\Nhom4_CTGT\Nhom4_CTGT\obj\Debug\Nhom4_CTGT.exe
 D:\Nhom4_CTGT\Nhom4_CTGT\obj\Debug\Nhom4_CTGT.pdb
+F:\_\CTDL\ATM\bin\Debug\Nhom4_CTGT.exe.config
+F:\_\CTDL\ATM\obj\Debug\Nhom4_CTGT.exe
+F:\_\CTDL\ATM\obj\Debug\Nhom4_CTGT.pdb
+F:\_\CTDL\ATM\bin\Debug\Nhom4_CTGT.exe
+F:\_\CTDL\ATM\bin\Debug\Nhom4_CTGT.pdb
+F:\_\CTDL\ATM\obj\Debug\Nhom4_CTGT.csprojResolveAssemblyReference.cache
