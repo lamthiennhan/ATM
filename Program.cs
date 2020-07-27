@@ -801,7 +801,9 @@ namespace Do_An2
             }
             if (chucNang == 2)
             {
-
+                ConsoleColor foreground = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                SoTienRut(a,b,c,d,user);
             }
             if (chucNang == 3)
             {
@@ -988,6 +990,66 @@ namespace Do_An2
             {
                 Console.WriteLine(e.Message);
             }
+        }
+
+        static void SoTienRut(List<Admin> a, List<TheTu> b, List<ID> c, List<LSID> d, string user)
+        {
+            //string file = "";
+            //StreamReader sr = new StreamReader(@"ID\" + "" + ".txt");
+            Console.Clear();
+            int soTien = 800000;
+            float tienRut;
+            tienrut:
+            Console.Write("nhap so tien ban muon rut: ");
+            float.TryParse(Console.ReadLine(), out tienRut);
+            if (tienRut > soTien)
+            {
+                Console.WriteLine("Rut tien khong thanh cong. so du khong du.");
+                goto tienrut;
+            }
+            else if (tienRut <= 49999)
+            {
+                Console.WriteLine("So tien ban muon rut phai lon hon 50000");
+                goto tienrut;
+            }
+            else
+            {
+                Console.WriteLine("Rut tien thanh cong !");
+                Console.WriteLine("So du con lai la: {0}", soTien - tienRut);
+            }
+            int chon;
+            do
+            {
+
+                Console.WriteLine("1.Quay lai");
+                Console.WriteLine("2.Thoat");
+                Console.Write("Chon chac nang: ");
+                int.TryParse(Console.ReadLine(), out chon);
+                if(chon == 1)
+                {
+                    Menu_User(a, b, c, d, user);
+                }
+                if (chon == 2)
+                {
+                    do
+                    {
+                        Console.Clear();
+                        Console.WriteLine("");
+                        Console.WriteLine("{0,5}{1}", "", "BAN MUON THOAT?");
+                        Console.WriteLine("{0}{1,10}{2}", "1.Co", "", "2.Quay lai");
+                        int.TryParse(Console.ReadLine(), out chon);
+                    } while (chon != 1 && chon != 2);
+                    if (chon == 1)
+                    {
+                        Environment.Exit(0);
+                    }
+                    else
+                    {
+                        Menu_User(a, b, c, d, user);
+                    }
+                }
+            } while (chon != 1 && chon != 2);
+
         }
     }
 }
