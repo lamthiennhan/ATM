@@ -997,25 +997,34 @@ namespace Do_An2
             //string file = "";
             //StreamReader sr = new StreamReader(@"ID\" + "" + ".txt");
             Console.Clear();
-            int soTien = 800000;
-            float tienRut;
+            int soDu = 0;
+            int tienRut;
             tienrut:
             Console.Write("nhap so tien ban muon rut: ");
-            float.TryParse(Console.ReadLine(), out tienRut);
-            if (tienRut > soTien)
+            int.TryParse(Console.ReadLine(), out tienRut);
+            for(int i = 0; i < c.Count; i++)
             {
-                Console.WriteLine("Rut tien khong thanh cong. so du khong du.");
-                goto tienrut;
-            }
-            else if (tienRut <= 49999)
-            {
-                Console.WriteLine("So tien ban muon rut phai lon hon 50000");
-                goto tienrut;
-            }
-            else
-            {
-                Console.WriteLine("Rut tien thanh cong !");
-                Console.WriteLine("So du con lai la: {0}", soTien - tienRut);
+                if (tienRut > c[i].soDu)
+                {
+                    Console.WriteLine("Rut tien khong thanh cong. so du khong du.");
+                    goto tienrut;
+                }
+                else if (tienRut <= 49999)
+                {
+                    Console.WriteLine("So tien ban muon rut phai lon hon 50000");
+                    goto tienrut;
+                }
+                else if (tienRut > c[i].soDu - 50000)
+                {
+                    Console.WriteLine("So du khong du. So du trong tai khoang phai >= 50000");
+                    goto tienrut;
+                }
+                else
+                {
+                    soDu = c[i].soDu - tienRut;
+                    Console.WriteLine("Rut tien thanh cong !");
+                    Console.WriteLine("So du con lai la: {0}", soDu);
+                }
             }
             int chon;
             do
