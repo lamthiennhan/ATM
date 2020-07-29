@@ -23,5 +23,13 @@ namespace Do_An2
             this.soDu = soDu;
             this.tienTe = tienTe;
         }
+
+        public void Xuat()
+        {        
+            Console.WriteLine("{0,10}{1,-20}{2,-20}", "", "ID:", id);
+            Console.WriteLine("{0,10}{1,-20}{2,-20}", "", "Ten:", ten);
+            Console.WriteLine("{0,10}{1,-20}{2,-20}", "", "So du:", soDu + " " + tienTe);
+            Console.WriteLine("{0,15}{1}", "", "--------------------");
+        }
     }
 }

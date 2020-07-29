@@ -16,12 +16,20 @@ namespace Do_An2
             tG = null;
             soTien = 0;
         }
-        public LSID(string loaiGD, string id, int soTien)
+        public LSID(string loaiGD, string tG, string id, int soTien)
         {
             this.loaiGD = loaiGD;
             this.id = id;
             this.tG = tG;
             this.soTien = soTien;
+        }
+
+        public void Xuat()
+        {
+            Console.WriteLine("{0,10}{1,-20}{2,-20}", "", "Ngay:", tG);
+            Console.WriteLine("{0,10}{1,-20}{2,-20}", "", "Loai Giao dich:", loaiGD);
+            Console.WriteLine("{0,10}{1,-20}{2,-20}", "", "So tien:", soTien);
+            Console.WriteLine("{0,15}{1}", "", "--------------------");
         }
     }
 }
