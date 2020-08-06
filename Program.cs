@@ -640,7 +640,7 @@ namespace Do_An2
             do
             {
                 Console.Clear();
-                Logo_XemDS();
+                Logo_XemTT();
 
                 for (int i = 0; i < c.Count; i++)
                 {
@@ -704,7 +704,7 @@ namespace Do_An2
             do
             {
                 Console.Clear();
-                Logo_Chuyen();
+                Logo_Rut();
                 Console.WriteLine("1.Rut tien");
                 Console.WriteLine("2.Quay lai");
                 Console.WriteLine("3.Thoat");
@@ -717,7 +717,7 @@ namespace Do_An2
                         kT = 0;
 
                         Console.Clear();
-                        Logo_Chuyen();
+                        Logo_Rut();
                         Console.Write("{0,5}{1,-20}", "", "Nhap so tien can rut:");
                         int.TryParse(Console.ReadLine(), out tienRut);
 
@@ -1060,16 +1060,55 @@ namespace Do_An2
         }
         static void GiaoDich(List<Admin> a, List<TheTu> b, List<ID> c, List<LSID> d, string user)
         {
-            Console.Clear();
-            Logo_GiaoDich();
-
-            for (int i = 0; i < d.Count; i++)
+            int chon, kT = 0;
+            do
             {
-                if (String.Compare(d[i].id, user) == 0)
+                Console.Clear();
+                Logo_GiaoDich();
+
+                for (int i = 0; i < d.Count; i++)
                 {
-                    d[i].Xuat();
+                    if (String.Compare(d[i].id, user) == 0)
+                    {
+                        d[i].Xuat();
+                        kT++;
+                    }
                 }
-            }
+
+                if(kT == 0)
+                {
+                    Console.WriteLine("{0,10}{1,-20}", "", "Chua co giao dich nao");
+                }
+
+                Console.WriteLine("1.Quay lai");
+                Console.WriteLine("2.Thoat");
+                Console.Write("Chon chac nang: ");
+                int.TryParse(Console.ReadLine(), out chon);
+                if (chon == 1)
+                {
+                    Menu_User(a, b, c, d, user);
+                }
+                if (chon == 2)
+                {
+                    do
+                    {
+                        Console.Clear();
+                        Console.WriteLine("");
+                        Console.WriteLine("{0,5}{1}", "", "BAN MUON THOAT?");
+                        Console.WriteLine("{0}{1,10}{2}", "1.Co", "", "2.Quay lai");
+                        int.TryParse(Console.ReadLine(), out chon);
+                    } while (chon != 1 && chon != 2);
+                    if (chon == 1)
+                    {
+                        Environment.Exit(0);
+                    }
+                    else
+                    {
+                        XemTT(a, b, c, d, user);
+                    }
+                }
+            } while (chon != 1 && chon != 2);
+            
         }
 
         //5_User
