@@ -6,22 +6,15 @@ namespace Do_An2
 {
     class LSID
     {
-        public string loaiGD, id, tG;
+        public DateTime tG;
+        public string loaiGD, id; 
         public int soTien;
 
         public LSID()
         {
             loaiGD = null;
             id = null;
-            tG = null;
             soTien = 0;
-        }
-        public LSID(string loaiGD, string tG, string id, int soTien)
-        {
-            this.loaiGD = loaiGD;
-            this.id = id;
-            this.tG = tG;
-            this.soTien = soTien;
         }
 
         public void Xuat()

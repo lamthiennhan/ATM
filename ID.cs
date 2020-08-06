@@ -16,13 +16,6 @@ namespace Do_An2
             soDu = 0;
             tienTe = null;
         }
-        public ID(string id, string ten, int soDu, string tienTe)
-        {
-            this.id = id;
-            this.ten = ten;
-            this.soDu = soDu;
-            this.tienTe = tienTe;
-        }
 
         public void Xuat()
         {        

@@ -14,12 +14,6 @@ namespace Do_An2
             maPin = null;
             tinhTrang = "1";
         }
-        public TheTu(string id, string maPin)
-        {
-            this.id = id;
-            this.maPin = maPin;
-            this.tinhTrang = "1";
-        }
 
         public void Xuat()
         {
