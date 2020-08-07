@@ -769,7 +769,7 @@ namespace Do_An2
                     LSID lsNew = new LSID();
                     lsNew.id = user;
                     lsNew.tG = time;
-                    lsNew.loaiGD = "Rut tien " + user;
+                    lsNew.loaiGD = "Rut tien ";
                     lsNew.soTien = tienRut;
                     d.Add(lsNew);
                     //Sua trong file
